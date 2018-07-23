@@ -10,16 +10,17 @@ import UIKit
 import KeychainAccess
 
 struct KEYCHAIN {
-    static let INSTAGRAM_ACCESS_TOKEN = "INSTAGRAM_ACCESS_TOKEN"
+    static let INSTAGRAM_ACCESS_TOKEN = "INSTAGRAM_ACCESS_TOKEN1"
 }
 
 class AuthViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
+    var delegate: RootViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let authURL = String(format: "%@%@?client_id=%@&redirect_uri=%@&response_type=token&scope=%@&DEBUG=True",
-                             arguments: [API.INSTAGRAM_DOMAIN,API.INSTAGRAM_AUTHURI,API.INSTAGRAM_CLIENT_ID,API.INSTAGRAM_REDIRECT_URI, API.INSTAGRAM_SCOPE])
+        let authURL = "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_AUTH_URI)?client_id=\(API.INSTAGRAM_CLIENT_ID)&redirect_uri=\(API.INSTAGRAM_REDIRECT_URI)&response_type=token&scope=\(API.INSTAGRAM_SCOPE)&DEBUG=True"
+        print(authURL)
         let urlRequest = URLRequest.init(url: URL.init(string: authURL)!)
         webView.loadRequest(urlRequest)
     }
@@ -35,9 +36,11 @@ class AuthViewController: UIViewController {
         print("Instagram authentication token ==", authToken)
         let keychain = Keychain(service: API.INSTAGRAM_DOMAIN)
         keychain[KEYCHAIN.INSTAGRAM_ACCESS_TOKEN] = authToken
-        self.dismiss(animated: true) {
-            
+        if let delegate = delegate {
+            delegate.callMediaRecentApi(authToken: authToken)
         }
+        self.dismiss(animated: true)
+
     }
 }
 

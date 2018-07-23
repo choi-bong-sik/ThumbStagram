@@ -9,7 +9,11 @@
 import UIKit
 import KeychainAccess
 
-class RootViewController: UIViewController {
+protocol RootViewProtocol {
+    func callMediaRecentApi(authToken:String)
+}
+
+class RootViewController: UIViewController, RootViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,20 +21,26 @@ class RootViewController: UIViewController {
         
         if let authToken = keychain[KEYCHAIN.INSTAGRAM_ACCESS_TOKEN] {
             print(authToken)
-            NetworkManager.sharedManager.requestGet(uri: API.INSTAGRAM_DOMAIN+API.INSTAGRAM_MEDIA_RECENTURI+"?access_token=\(authToken)",
-                                                    parameter: ["":""])
-            {
-                (result, responseData, error) in
-                print(result)
-                print(responseData)
-            }
+            
         }else{
             showAuthViewController()
         }
     }
     
     func showAuthViewController() {
-        let vc: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Auth") as UIViewController
-        self.present(vc, animated: true, completion: nil)
+        let vc: AuthViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Auth") as! AuthViewController
+        vc.delegate = self
+        self.present(vc, animated: true)
+    }
+    
+    func callMediaRecentApi(authToken:String){
+        NetworkManager.sharedManager.requestGet(uri:
+            "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_MEDIA_RECENT_URI)?access_token=\(authToken)")
+        {
+            (result, responseData, error) in
+            print(result)
+            print(responseData)
+        }
     }
 }
+

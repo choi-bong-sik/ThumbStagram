@@ -203,7 +203,6 @@
 				2300788B2103867500BEC73F /* Frameworks */,
 				2300788C2103867500BEC73F /* Resources */,
 				414F55DB1A0F8EF1F7B89766 /* [CP] Embed Pods Frameworks */,
-				B9AE169FEE348F0A602E3488 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,8 +221,6 @@
 				2300789E2103867800BEC73F /* Sources */,
 				2300789F2103867800BEC73F /* Frameworks */,
 				230078A02103867800BEC73F /* Resources */,
-				69190DD02E851733DBDA8CED /* [CP] Embed Pods Frameworks */,
-				CC8EC4A346424096A33BA4DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,8 +240,6 @@
 				230078A92103867800BEC73F /* Sources */,
 				230078AA2103867800BEC73F /* Frameworks */,
 				230078AB2103867800BEC73F /* Resources */,
-				A60D8A3F088870CAF2868613 /* [CP] Embed Pods Frameworks */,
-				186AD21C00CF3E2E69128319 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -327,21 +322,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		186AD21C00CF3E2E69128319 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		414F55DB1A0F8EF1F7B89766 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,21 +340,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		69190DD02E851733DBDA8CED /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6BFF6E72A32C97B1E37E7885 /* [CP] Check Pods Manifest.lock */ = {
@@ -413,21 +378,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A60D8A3F088870CAF2868613 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AEBC257752B04865698C252B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,36 +394,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9AE169FEE348F0A602E3488 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CC8EC4A346424096A33BA4DA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

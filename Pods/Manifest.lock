@@ -6,10 +6,15 @@ DEPENDENCIES:
   - Alamofire (~> 4.7)
   - KeychainAccess
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - KeychainAccess
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
 
 PODFILE CHECKSUM: f333df32f9105162fd5ea8f55bd0fff168b3af33
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
