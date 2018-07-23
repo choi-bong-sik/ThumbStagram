@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		196230FE5F3FD4CDD8619BB0 /* Pods_ThumbStagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CA3077ECFDB6E8C25EDFC7 /* Pods_ThumbStagramUITests.framework */; };
 		230078922103867500BEC73F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078912103867500BEC73F /* AppDelegate.swift */; };
 		230078942103867500BEC73F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078932103867500BEC73F /* ViewController.swift */; };
 		230078972103867500BEC73F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230078952103867500BEC73F /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		2300789C2103867800BEC73F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2300789A2103867800BEC73F /* LaunchScreen.storyboard */; };
 		230078A72103867800BEC73F /* ThumbStagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078A62103867800BEC73F /* ThumbStagramTests.swift */; };
 		230078B22103867800BEC73F /* ThumbStagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078B12103867800BEC73F /* ThumbStagramUITests.swift */; };
+		5EA8A796C7B6B330025649E1 /* Pods_ThumbStagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333393F94404A0C15CC3EB33 /* Pods_ThumbStagramTests.framework */; };
+		DA39431DAABE27D7B5099A3F /* Pods_ThumbStagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEFF3D0F13A9B1E3F60ACCC /* Pods_ThumbStagram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CEFF3D0F13A9B1E3F60ACCC /* Pods_ThumbStagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThumbStagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2300788E2103867500BEC73F /* ThumbStagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThumbStagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		230078912103867500BEC73F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		230078932103867500BEC73F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		230078AD2103867800BEC73F /* ThumbStagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThumbStagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		230078B12103867800BEC73F /* ThumbStagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbStagramUITests.swift; sourceTree = "<group>"; };
 		230078B32103867800BEC73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333393F94404A0C15CC3EB33 /* Pods_ThumbStagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThumbStagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37CA3077ECFDB6E8C25EDFC7 /* Pods_ThumbStagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThumbStagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C0B2F51D3DB6A4B1BD4BCBC /* Pods-ThumbStagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram.release.xcconfig"; sourceTree = "<group>"; };
+		7F296E6FF72048EDF22F1482 /* Pods-ThumbStagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram.debug.xcconfig"; sourceTree = "<group>"; };
+		906D3D42CAB62A57BFA333D4 /* Pods-ThumbStagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B493C989CA397708C6367B34 /* Pods-ThumbStagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E52E74A55928250D80B2B6A3 /* Pods-ThumbStagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F40E1212F0527B6EC643FB5A /* Pods-ThumbStagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA39431DAABE27D7B5099A3F /* Pods_ThumbStagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA8A796C7B6B330025649E1 /* Pods_ThumbStagramTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196230FE5F3FD4CDD8619BB0 /* Pods_ThumbStagramUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				230078A52103867800BEC73F /* ThumbStagramTests */,
 				230078B02103867800BEC73F /* ThumbStagramUITests */,
 				2300788F2103867500BEC73F /* Products */,
+				5747F9908B0677AE1EF060D0 /* Pods */,
+				A7A5463C2A433216F007098F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = ThumbStagramUITests;
 			sourceTree = "<group>";
 		};
+		5747F9908B0677AE1EF060D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F296E6FF72048EDF22F1482 /* Pods-ThumbStagram.debug.xcconfig */,
+				3C0B2F51D3DB6A4B1BD4BCBC /* Pods-ThumbStagram.release.xcconfig */,
+				906D3D42CAB62A57BFA333D4 /* Pods-ThumbStagramTests.debug.xcconfig */,
+				F40E1212F0527B6EC643FB5A /* Pods-ThumbStagramTests.release.xcconfig */,
+				B493C989CA397708C6367B34 /* Pods-ThumbStagramUITests.debug.xcconfig */,
+				E52E74A55928250D80B2B6A3 /* Pods-ThumbStagramUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7A5463C2A433216F007098F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CEFF3D0F13A9B1E3F60ACCC /* Pods_ThumbStagram.framework */,
+				333393F94404A0C15CC3EB33 /* Pods_ThumbStagramTests.framework */,
+				37CA3077ECFDB6E8C25EDFC7 /* Pods_ThumbStagramUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 230078B62103867800BEC73F /* Build configuration list for PBXNativeTarget "ThumbStagram" */;
 			buildPhases = (
+				AEBC257752B04865698C252B /* [CP] Check Pods Manifest.lock */,
 				2300788A2103867500BEC73F /* Sources */,
 				2300788B2103867500BEC73F /* Frameworks */,
 				2300788C2103867500BEC73F /* Resources */,
+				414F55DB1A0F8EF1F7B89766 /* [CP] Embed Pods Frameworks */,
+				B9AE169FEE348F0A602E3488 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 230078B92103867800BEC73F /* Build configuration list for PBXNativeTarget "ThumbStagramTests" */;
 			buildPhases = (
+				91AECB4FD4873835586436F1 /* [CP] Check Pods Manifest.lock */,
 				2300789E2103867800BEC73F /* Sources */,
 				2300789F2103867800BEC73F /* Frameworks */,
 				230078A02103867800BEC73F /* Resources */,
+				69190DD02E851733DBDA8CED /* [CP] Embed Pods Frameworks */,
+				CC8EC4A346424096A33BA4DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 230078BC2103867800BEC73F /* Build configuration list for PBXNativeTarget "ThumbStagramUITests" */;
 			buildPhases = (
+				6BFF6E72A32C97B1E37E7885 /* [CP] Check Pods Manifest.lock */,
 				230078A92103867800BEC73F /* Sources */,
 				230078AA2103867800BEC73F /* Frameworks */,
 				230078AB2103867800BEC73F /* Resources */,
+				A60D8A3F088870CAF2868613 /* [CP] Embed Pods Frameworks */,
+				186AD21C00CF3E2E69128319 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +299,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		186AD21C00CF3E2E69128319 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		414F55DB1A0F8EF1F7B89766 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69190DD02E851733DBDA8CED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BFF6E72A32C97B1E37E7885 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThumbStagramUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91AECB4FD4873835586436F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThumbStagramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A60D8A3F088870CAF2868613 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEBC257752B04865698C252B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThumbStagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9AE169FEE348F0A602E3488 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC8EC4A346424096A33BA4DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2300788A2103867500BEC73F /* Sources */ = {
@@ -428,15 +627,13 @@
 		};
 		230078B72103867800BEC73F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F296E6FF72048EDF22F1482 /* Pods-ThumbStagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9553L7VB9;
 				INFOPLIST_FILE = ThumbStagram/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inicis.ThumbStagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -446,15 +643,13 @@
 		};
 		230078B82103867800BEC73F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C0B2F51D3DB6A4B1BD4BCBC /* Pods-ThumbStagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9553L7VB9;
 				INFOPLIST_FILE = ThumbStagram/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inicis.ThumbStagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -464,17 +659,14 @@
 		};
 		230078BA2103867800BEC73F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 906D3D42CAB62A57BFA333D4 /* Pods-ThumbStagramTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -485,17 +677,14 @@
 		};
 		230078BB2103867800BEC73F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F40E1212F0527B6EC643FB5A /* Pods-ThumbStagramTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -506,16 +695,13 @@
 		};
 		230078BD2103867800BEC73F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B493C989CA397708C6367B34 /* Pods-ThumbStagramUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -526,16 +712,13 @@
 		};
 		230078BE2103867800BEC73F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E52E74A55928250D80B2B6A3 /* Pods-ThumbStagramUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

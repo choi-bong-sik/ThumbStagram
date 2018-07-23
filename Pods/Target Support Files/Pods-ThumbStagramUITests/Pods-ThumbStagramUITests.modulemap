@@ -1,0 +1,6 @@
+framework module Pods_ThumbStagramUITests {
+  umbrella header "Pods-ThumbStagramUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
