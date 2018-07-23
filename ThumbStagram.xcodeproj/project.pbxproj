@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		196230FE5F3FD4CDD8619BB0 /* Pods_ThumbStagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CA3077ECFDB6E8C25EDFC7 /* Pods_ThumbStagramUITests.framework */; };
 		230078922103867500BEC73F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078912103867500BEC73F /* AppDelegate.swift */; };
-		230078942103867500BEC73F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078932103867500BEC73F /* ViewController.swift */; };
+		230078942103867500BEC73F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078932103867500BEC73F /* RootViewController.swift */; };
 		230078972103867500BEC73F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230078952103867500BEC73F /* Main.storyboard */; };
 		230078992103867800BEC73F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 230078982103867800BEC73F /* Assets.xcassets */; };
 		2300789C2103867800BEC73F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2300789A2103867800BEC73F /* LaunchScreen.storyboard */; };
 		230078A72103867800BEC73F /* ThumbStagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078A62103867800BEC73F /* ThumbStagramTests.swift */; };
 		230078B22103867800BEC73F /* ThumbStagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078B12103867800BEC73F /* ThumbStagramUITests.swift */; };
 		5EA8A796C7B6B330025649E1 /* Pods_ThumbStagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333393F94404A0C15CC3EB33 /* Pods_ThumbStagramTests.framework */; };
+		9AE1A21721055984007152F6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1A21621055984007152F6 /* NetworkManager.swift */; };
+		9AE1A21A210566AD007152F6 /* OauthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1A219210566AD007152F6 /* OauthViewController.swift */; };
 		DA39431DAABE27D7B5099A3F /* Pods_ThumbStagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEFF3D0F13A9B1E3F60ACCC /* Pods_ThumbStagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +42,7 @@
 		0CEFF3D0F13A9B1E3F60ACCC /* Pods_ThumbStagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThumbStagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2300788E2103867500BEC73F /* ThumbStagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThumbStagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		230078912103867500BEC73F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		230078932103867500BEC73F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		230078932103867500BEC73F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		230078962103867500BEC73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		230078982103867800BEC73F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2300789B2103867800BEC73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,8 @@
 		3C0B2F51D3DB6A4B1BD4BCBC /* Pods-ThumbStagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram.release.xcconfig"; sourceTree = "<group>"; };
 		7F296E6FF72048EDF22F1482 /* Pods-ThumbStagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram.debug.xcconfig"; sourceTree = "<group>"; };
 		906D3D42CAB62A57BFA333D4 /* Pods-ThumbStagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9AE1A21621055984007152F6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9AE1A219210566AD007152F6 /* OauthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthViewController.swift; sourceTree = "<group>"; };
 		B493C989CA397708C6367B34 /* Pods-ThumbStagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E52E74A55928250D80B2B6A3 /* Pods-ThumbStagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F40E1212F0527B6EC643FB5A /* Pods-ThumbStagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,8 +118,9 @@
 		230078902103867500BEC73F /* ThumbStagram */ = {
 			isa = PBXGroup;
 			children = (
+				9AE1A2182105665B007152F6 /* ViewControllers */,
+				9AE1A21521055963007152F6 /* Network */,
 				230078912103867500BEC73F /* AppDelegate.swift */,
-				230078932103867500BEC73F /* ViewController.swift */,
 				230078952103867500BEC73F /* Main.storyboard */,
 				230078982103867800BEC73F /* Assets.xcassets */,
 				2300789A2103867800BEC73F /* LaunchScreen.storyboard */,
@@ -153,6 +158,23 @@
 				E52E74A55928250D80B2B6A3 /* Pods-ThumbStagramUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9AE1A21521055963007152F6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9AE1A21621055984007152F6 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9AE1A2182105665B007152F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9AE1A219210566AD007152F6 /* OauthViewController.swift */,
+				230078932103867500BEC73F /* RootViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A7A5463C2A433216F007098F /* Frameworks */ = {
@@ -455,7 +477,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				230078942103867500BEC73F /* ViewController.swift in Sources */,
+				9AE1A21A210566AD007152F6 /* OauthViewController.swift in Sources */,
+				9AE1A21721055984007152F6 /* NetworkManager.swift in Sources */,
+				230078942103867500BEC73F /* RootViewController.swift in Sources */,
 				230078922103867500BEC73F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,7 +657,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9553L7VB9;
 				INFOPLIST_FILE = ThumbStagram/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inicis.ThumbStagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -649,7 +676,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9553L7VB9;
 				INFOPLIST_FILE = ThumbStagram/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inicis.ThumbStagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -666,7 +696,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -684,7 +718,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -701,7 +739,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -718,7 +760,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
