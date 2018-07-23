@@ -10,7 +10,7 @@ import UIKit
 import KeychainAccess
 
 struct KEYCHAIN {
-    static let INSTAGRAM_ACCESS_TOKEN = "INSTAGRAM_ACCESS_TOKEN1"
+    static let INSTAGRAM_ACCESS_TOKEN = "INSTAGRAM_ACCESS_TOKEN"
 }
 
 class AuthViewController: UIViewController {
@@ -20,7 +20,6 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let authURL = "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_AUTH_URI)?client_id=\(API.INSTAGRAM_CLIENT_ID)&redirect_uri=\(API.INSTAGRAM_REDIRECT_URI)&response_type=token&scope=\(API.INSTAGRAM_SCOPE)&DEBUG=True"
-        print(authURL)
         let urlRequest = URLRequest.init(url: URL.init(string: authURL)!)
         webView.loadRequest(urlRequest)
     }
@@ -40,7 +39,6 @@ class AuthViewController: UIViewController {
             delegate.callMediaRecentApi(authToken: authToken)
         }
         self.dismiss(animated: true)
-
     }
 }
 
