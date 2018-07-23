@@ -7,18 +7,30 @@
 //
 
 import UIKit
+import KeychainAccess
 
 class RootViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let keychain = Keychain(service: API.INSTAGRAM_DOMAIN)
         
+        if let authToken = keychain[KEYCHAIN.INSTAGRAM_ACCESS_TOKEN] {
+            print(authToken)
+            NetworkManager.sharedManager.requestGet(uri: API.INSTAGRAM_DOMAIN+API.INSTAGRAM_MEDIA_RECENTURI+"?access_token=\(authToken)",
+                                                    parameter: ["":""])
+            {
+                (result, responseData, error) in
+                print(result)
+                print(responseData)
+            }
+        }else{
+            showAuthViewController()
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func showAuthViewController() {
+        let vc: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Auth") as UIViewController
+        self.present(vc, animated: true, completion: nil)
     }
 }
-

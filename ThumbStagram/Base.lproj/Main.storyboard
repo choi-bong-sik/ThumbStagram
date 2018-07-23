@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="161" y="125"/>
         </scene>
-        <!--View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="oct-AW-9bF">
             <objects>
-                <viewController id="h6j-14-JbQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Auth" id="h6j-14-JbQ" customClass="AuthViewController" customModule="ThumbStagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a40-0k-v2V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,9 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-1q-fjq">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="h6j-14-JbQ" id="TOU-ND-ms1"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,6 +51,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oyp-N8-raJ"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="7fj-1q-fjq" id="Mlc-Sw-VNG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtV-ww-4az" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

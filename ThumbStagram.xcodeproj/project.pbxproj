@@ -16,8 +16,9 @@
 		230078A72103867800BEC73F /* ThumbStagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078A62103867800BEC73F /* ThumbStagramTests.swift */; };
 		230078B22103867800BEC73F /* ThumbStagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078B12103867800BEC73F /* ThumbStagramUITests.swift */; };
 		5EA8A796C7B6B330025649E1 /* Pods_ThumbStagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333393F94404A0C15CC3EB33 /* Pods_ThumbStagramTests.framework */; };
+		9AA93D782105A6BB00158E37 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA93D772105A6BB00158E37 /* Security.framework */; };
 		9AE1A21721055984007152F6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1A21621055984007152F6 /* NetworkManager.swift */; };
-		9AE1A21A210566AD007152F6 /* OauthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1A219210566AD007152F6 /* OauthViewController.swift */; };
+		9AE1A21A210566AD007152F6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1A219210566AD007152F6 /* AuthViewController.swift */; };
 		DA39431DAABE27D7B5099A3F /* Pods_ThumbStagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEFF3D0F13A9B1E3F60ACCC /* Pods_ThumbStagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +59,9 @@
 		3C0B2F51D3DB6A4B1BD4BCBC /* Pods-ThumbStagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram.release.xcconfig"; sourceTree = "<group>"; };
 		7F296E6FF72048EDF22F1482 /* Pods-ThumbStagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram.debug.xcconfig"; sourceTree = "<group>"; };
 		906D3D42CAB62A57BFA333D4 /* Pods-ThumbStagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9AA93D772105A6BB00158E37 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9AE1A21621055984007152F6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		9AE1A219210566AD007152F6 /* OauthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthViewController.swift; sourceTree = "<group>"; };
+		9AE1A219210566AD007152F6 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B493C989CA397708C6367B34 /* Pods-ThumbStagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E52E74A55928250D80B2B6A3 /* Pods-ThumbStagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F40E1212F0527B6EC643FB5A /* Pods-ThumbStagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA93D782105A6BB00158E37 /* Security.framework in Frameworks */,
 				DA39431DAABE27D7B5099A3F /* Pods_ThumbStagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,7 +174,7 @@
 		9AE1A2182105665B007152F6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9AE1A219210566AD007152F6 /* OauthViewController.swift */,
+				9AE1A219210566AD007152F6 /* AuthViewController.swift */,
 				230078932103867500BEC73F /* RootViewController.swift */,
 			);
 			path = ViewControllers;
@@ -180,6 +183,7 @@
 		A7A5463C2A433216F007098F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AA93D772105A6BB00158E37 /* Security.framework */,
 				0CEFF3D0F13A9B1E3F60ACCC /* Pods_ThumbStagram.framework */,
 				333393F94404A0C15CC3EB33 /* Pods_ThumbStagramTests.framework */,
 				37CA3077ECFDB6E8C25EDFC7 /* Pods_ThumbStagramUITests.framework */,
@@ -346,10 +350,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -477,7 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE1A21A210566AD007152F6 /* OauthViewController.swift in Sources */,
+				9AE1A21A210566AD007152F6 /* AuthViewController.swift in Sources */,
 				9AE1A21721055984007152F6 /* NetworkManager.swift in Sources */,
 				230078942103867500BEC73F /* RootViewController.swift in Sources */,
 				230078922103867500BEC73F /* AppDelegate.swift in Sources */,

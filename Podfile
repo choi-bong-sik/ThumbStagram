@@ -7,7 +7,8 @@ target 'ThumbStagram' do
 
   # Pods for ThumbStagram
 	pod 'Alamofire', '~> 4.7'
-
+    pod 'KeychainAccess'
+    
   target 'ThumbStagramTests' do
     inherit! :search_paths
     # Pods for testing
