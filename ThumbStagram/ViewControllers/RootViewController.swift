@@ -14,6 +14,7 @@ protocol RootViewProtocol {
 }
 
 class RootViewController: UIViewController, RootViewProtocol {
+    var pagination: Pagination?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class RootViewController: UIViewController, RootViewProtocol {
         
         if let authToken = keychain[KEYCHAIN.INSTAGRAM_ACCESS_TOKEN] {
             print(authToken)
-            
+            callMediaRecentApi(authToken: authToken)
         }else{
             showAuthViewController()
         }
@@ -35,11 +36,16 @@ class RootViewController: UIViewController, RootViewProtocol {
     
     func callMediaRecentApi(authToken:String){
         NetworkManager.sharedManager.requestGet(uri:
-            "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_MEDIA_RECENT_URI)?access_token=\(authToken)")
+            "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_MEDIA_RECENT_URI)?access_token=\(authToken)&count=1")
         {
-            (result, responseData, error) in
-            print(result)
-            print(responseData)
+            [weak self] (result, responseData, error) in
+            guard let `self` = self else { return }
+            if result {
+                // 성공
+                self.pagination = Pagination(dictionary: responseData!["pagination"] as! [String : Any])
+            }else{
+                // 실패
+            }
         }
     }
 }
