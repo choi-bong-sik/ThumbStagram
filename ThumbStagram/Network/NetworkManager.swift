@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 
 struct API{
     static let INSTAGRAM_DOMAIN = "https://api.instagram.com"

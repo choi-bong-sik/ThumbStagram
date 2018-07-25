@@ -10,10 +10,13 @@ import Foundation
 
 public struct Thumbnail {
     
-    public var height : Int!
-    public var url : String!
-    public var width : Int!
-    init(dictionary:[String:Any]){
-    }
+    public var height: Int
+    public var url: String
+    public var width: Int
     
+    init(height:Int, url:String, width:Int) {
+        self.height = height
+        self.url = url
+        self.width = width
+    }
 }

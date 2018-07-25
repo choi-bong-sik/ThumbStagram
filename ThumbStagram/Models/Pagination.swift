@@ -9,11 +9,11 @@
 import Foundation
 
 public struct Pagination {
-    public var nextMaxId : String!
-    public var nextUrl : String!
+    public var nextMaxId : String
+    public var nextUrl : String
     
-    init(dictionary:[String:Any]){
-        self.nextMaxId = dictionary["next_max_id"] as! String
-        self.nextUrl = dictionary["next_url"] as! String
+    init(nextMaxId:String, nextUrl:String){
+        self.nextMaxId = nextMaxId
+        self.nextUrl = nextUrl
     }
 }

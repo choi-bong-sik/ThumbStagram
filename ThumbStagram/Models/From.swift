@@ -9,12 +9,14 @@
 import Foundation
 
 public struct From {
-    
-    public var fullName : String!
-    public var id : String!
-    public var profilePicture : String!
-    public var username : String!
-    init(dictionary:[String:Any]){
-        
+    public var fullName : String
+    public var id : String
+    public var profilePicture : String
+    public var username : String
+    init(fullName:String, id:String, profilePicture:String,username:String){
+        self.fullName = fullName
+        self.id = id
+        self.profilePicture = profilePicture
+        self.username = username
     }
 }

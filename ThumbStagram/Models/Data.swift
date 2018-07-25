@@ -26,23 +26,64 @@ public struct Data {
     public var userHasLiked : Bool!
     public var usersInPhoto : [AnyObject]!
     public var videos : Video!
+    public var carouselMedia : [CarouselMedia]!
     
     init(dictionary:[String:Any]){
-        self.attribution = dictionary["attribution"] as AnyObject
-        self.caption = Caption(dictionary: dictionary["caption"] as! [String : Any])
-        self.comments = Comment(dictionary: dictionary["comments"] as! [String : Any])
-        self.createdTime = dictionary["created_time"] as! String
-        self.filter = dictionary["filter"] as! String
-        self.id = dictionary["id"] as! String
-        self.images = Image(dictionary: dictionary["images"] as! [String : Any])
-        self.likes = Like(dictionary: dictionary["likes"] as! [String:Any])
-        self.link = dictionary["link"] as! String
-        self.location = dictionary["location"] as AnyObject
-        self.tags = dictionary["tags"] as! [String]
-        self.type = dictionary["type"] as! String
-        self.user = User(dictionary: dictionary["user"] as! [String : Any])
-        self.userHasLiked = dictionary["user_has_liked"] as! Bool
-        self.usersInPhoto = dictionary["users_in_photo"] as! [AnyObject]
-        self.videos = Video(dictionary: dictionary["videos"] as! [String : Any])
+        if let attribution = dictionary["attribution"] {
+            self.attribution = attribution as AnyObject
+        }
+        if let captionDic = dictionary["caption"] {
+            self.caption = Caption(dictionary: captionDic as! [String : Any] )
+        }
+        if let commentsDic = dictionary["comments"] as? [String : Any] {
+            self.comments = Comment(count: commentsDic["count"] as! Int)
+        }
+        if let createdTime = dictionary["created_time"] {
+            self.createdTime = createdTime as! String
+        }
+        if let filter = dictionary["filter"] {
+            self.filter = filter as! String
+        }
+        if let id = dictionary["id"]{
+            self.id = id as! String
+        }
+        if let images = dictionary["images"]{
+            self.images = Image(dictionary: images as! [String : Any])
+        }
+        if let likeDic = dictionary["likes"] as? [String:Any]{
+            self.likes = Like(count: likeDic["count"] as! Int)
+        }
+        if let link = dictionary["link"] {
+            self.link = link as! String
+        }
+        if let location = dictionary["location"]{
+            self.location = location as AnyObject
+        }
+        if let tags = dictionary["tags"] {
+            self.tags = tags as? [String]
+        }
+        if let type = dictionary["type"] {
+            self.type = type as! String
+        }
+        if let userDic = dictionary["user"] as? [String:Any] {
+            self.user = User(fullName: userDic["full_name"] as! String,
+                             id: userDic["id"] as! String,
+                             profilePicture: userDic["profile_picture"] as! String,
+                             username: userDic["username"] as! String)
+        }
+        if let userHasLinked = dictionary["user_has_liked"] {
+            self.userHasLiked = userHasLinked as! Bool
+        }
+        if let usersInPhoto = dictionary["users_in_photo"] {
+            self.usersInPhoto = usersInPhoto as! [AnyObject]
+        }
+        if let videos = dictionary["videos"] {
+            self.videos = Video(dictionary: videos as! [String : Any])
+        }
+        if let carousels:Array = dictionary["carousel_media"] as? Array<Dictionary<String,Any>> {
+            self.carouselMedia = carousels.map { (dic) -> CarouselMedia in
+                return CarouselMedia(dictionary: dic)
+            }
+        }
     }
 }

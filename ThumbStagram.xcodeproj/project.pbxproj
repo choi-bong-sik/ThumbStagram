@@ -19,6 +19,8 @@
 		9A1CA5392106E7110078564C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA5372106E7110078564C /* Video.swift */; };
 		9A1CA53A2106E7110078564C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA5382106E7110078564C /* Comment.swift */; };
 		9A1CA53C2106E7280078564C /* LowBandwidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA53B2106E7280078564C /* LowBandwidth.swift */; };
+		9A3A98372108074A0018D6F5 /* CarouselMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A98362108074A0018D6F5 /* CarouselMedia.swift */; };
+		9A3A983921080B9F0018D6F5 /* ImageSpecProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A983821080B9F0018D6F5 /* ImageSpecProtocol.swift */; };
 		9A6A3DFC2106C2EB00496A62 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3DFB2106C2EB00496A62 /* Pagination.swift */; };
 		9A6A3DFE2106C40500496A62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3DFD2106C40500496A62 /* User.swift */; };
 		9A6A3E002106C43800496A62 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3DFF2106C43800496A62 /* Thumbnail.swift */; };
@@ -75,6 +77,8 @@
 		9A1CA5372106E7110078564C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		9A1CA5382106E7110078564C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		9A1CA53B2106E7280078564C /* LowBandwidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowBandwidth.swift; sourceTree = "<group>"; };
+		9A3A98362108074A0018D6F5 /* CarouselMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselMedia.swift; sourceTree = "<group>"; };
+		9A3A983821080B9F0018D6F5 /* ImageSpecProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecProtocol.swift; sourceTree = "<group>"; };
 		9A6A3DFB2106C2EB00496A62 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		9A6A3DFD2106C40500496A62 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A6A3DFF2106C43800496A62 /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		9A6A3DFA2106BC3500496A62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9A3A983821080B9F0018D6F5 /* ImageSpecProtocol.swift */,
 				9A1CA53B2106E7280078564C /* LowBandwidth.swift */,
 				9A1CA5382106E7110078564C /* Comment.swift */,
 				9A1CA5372106E7110078564C /* Video.swift */,
@@ -206,6 +211,7 @@
 				9A6A3DFF2106C43800496A62 /* Thumbnail.swift */,
 				9A6A3DFD2106C40500496A62 /* User.swift */,
 				9A6A3DFB2106C2EB00496A62 /* Pagination.swift */,
+				9A3A98362108074A0018D6F5 /* CarouselMedia.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -542,6 +548,8 @@
 				9A6A3E0D2106E21100496A62 /* From.swift in Sources */,
 				9A6A3E0B2106E21100496A62 /* Caption.swift in Sources */,
 				9A6A3E022106E0BE00496A62 /* LowResolution.swift in Sources */,
+				9A3A98372108074A0018D6F5 /* CarouselMedia.swift in Sources */,
+				9A3A983921080B9F0018D6F5 /* ImageSpecProtocol.swift in Sources */,
 				9A1CA53A2106E7110078564C /* Comment.swift in Sources */,
 				230078942103867500BEC73F /* RootViewController.swift in Sources */,
 				9A6A3E092106E21100496A62 /* Like.swift in Sources */,
@@ -723,7 +731,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9553L7VB9;
 				INFOPLIST_FILE = ThumbStagram/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inicis.ThumbStagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -739,7 +750,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9553L7VB9;
 				INFOPLIST_FILE = ThumbStagram/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inicis.ThumbStagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -756,7 +770,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -774,7 +792,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -791,7 +813,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -808,7 +834,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8ZP5V9CXT;
 				INFOPLIST_FILE = ThumbStagramUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ThumbStagramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

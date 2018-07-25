@@ -9,9 +9,8 @@
 import Foundation
 
 public struct Like {
-    
-    public var count : Int!
-    init(dictionary:[String:Any]){
+    public var count : Int?
+    init(count:Int){
+        self.count = count
     }
-    
 }

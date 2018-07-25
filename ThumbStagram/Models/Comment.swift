@@ -9,8 +9,8 @@
 import Foundation
 
 public struct Comment {
-    public var count : Int!
-    init(dictionary:[String:Any]){
-        self.count = dictionary["count"] as? Int
+    public var count : Int
+    init(count:Int){
+        self.count = count
     }
 }
