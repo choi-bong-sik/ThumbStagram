@@ -19,6 +19,8 @@
 		9A1CA5392106E7110078564C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA5372106E7110078564C /* Video.swift */; };
 		9A1CA53A2106E7110078564C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA5382106E7110078564C /* Comment.swift */; };
 		9A1CA53C2106E7280078564C /* LowBandwidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA53B2106E7280078564C /* LowBandwidth.swift */; };
+		9A29B49F2108722800EA3459 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A29B49E2108722800EA3459 /* ContentTableViewCell.swift */; };
+		9A29B4A521094E8500EA3459 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A29B4A421094E8500EA3459 /* UIViewExtensions.swift */; };
 		9A3A98372108074A0018D6F5 /* CarouselMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A98362108074A0018D6F5 /* CarouselMedia.swift */; };
 		9A3A983921080B9F0018D6F5 /* ImageSpecProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A983821080B9F0018D6F5 /* ImageSpecProtocol.swift */; };
 		9A6A3DFC2106C2EB00496A62 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3DFB2106C2EB00496A62 /* Pagination.swift */; };
@@ -77,6 +79,8 @@
 		9A1CA5372106E7110078564C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		9A1CA5382106E7110078564C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		9A1CA53B2106E7280078564C /* LowBandwidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowBandwidth.swift; sourceTree = "<group>"; };
+		9A29B49E2108722800EA3459 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
+		9A29B4A421094E8500EA3459 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		9A3A98362108074A0018D6F5 /* CarouselMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselMedia.swift; sourceTree = "<group>"; };
 		9A3A983821080B9F0018D6F5 /* ImageSpecProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecProtocol.swift; sourceTree = "<group>"; };
 		9A6A3DFB2106C2EB00496A62 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 		230078902103867500BEC73F /* ThumbStagram */ = {
 			isa = PBXGroup;
 			children = (
+				9A29B4A021094E6400EA3459 /* Exatensions */,
+				9A29B49D210871FD00EA3459 /* Views */,
 				9A6A3DFA2106BC3500496A62 /* Models */,
 				9AE1A2182105665B007152F6 /* ViewControllers */,
 				9AE1A21521055963007152F6 /* Network */,
@@ -192,6 +198,22 @@
 				E52E74A55928250D80B2B6A3 /* Pods-ThumbStagramUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9A29B49D210871FD00EA3459 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A29B49E2108722800EA3459 /* ContentTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9A29B4A021094E6400EA3459 /* Exatensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A29B4A421094E8500EA3459 /* UIViewExtensions.swift */,
+			);
+			path = Exatensions;
 			sourceTree = "<group>";
 		};
 		9A6A3DFA2106BC3500496A62 /* Models */ = {
@@ -537,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE1A21A210566AD007152F6 /* AuthViewController.swift in Sources */,
+				9A29B4A521094E8500EA3459 /* UIViewExtensions.swift in Sources */,
 				9A6A3E0C2106E21100496A62 /* Image.swift in Sources */,
 				9A6A3E0A2106E21100496A62 /* Data.swift in Sources */,
 				9AE1A21721055984007152F6 /* NetworkManager.swift in Sources */,
@@ -555,6 +578,7 @@
 				9A6A3E092106E21100496A62 /* Like.swift in Sources */,
 				230078922103867500BEC73F /* AppDelegate.swift in Sources */,
 				9A6A3E002106C43800496A62 /* Thumbnail.swift in Sources */,
+				9A29B49F2108722800EA3459 /* ContentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
