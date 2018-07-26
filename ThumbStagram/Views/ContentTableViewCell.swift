@@ -9,16 +9,8 @@
 import UIKit
 
 class ContentTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    @IBOutlet weak var imgThumbNail: UIImageView!
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var imgContnet: UIImageView!
+    @IBOutlet weak var lblCaptionText: UILabel!
 }

@@ -67,7 +67,6 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
     // MARK: - table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let dataCount = datas?.count {
-            
             return dataCount
         }
         return 0
@@ -75,6 +74,11 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifierContent", for: indexPath) as! ContentTableViewCell
+        let data = datas![indexPath.row]
+        cell.lblUserName.text = data.user.username
+        cell.lblCaptionText.text = data.caption.text
+        cell.imgThumbNail.loadImageUsingCache(withUrl: data.user.profilePicture)
+        cell.imgContnet.loadImageUsingCache(withUrl: data.images.thumbnail.url)
         return cell
     }
     
