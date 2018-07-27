@@ -27,19 +27,20 @@ class NetworkManager: NSObject {
     func requestGet(uri: String,
                     completion:@escaping (_ result: Bool, _ data: Dictionary<String, Any>?, _ error: Error?) -> Void)
     {
+        print("request uri :: \(uri)")
         SessionManager.default.request(uri, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseData {
-            [weak self] responseData in
-            guard let `self` = self else { return }
+            responseData in
             switch responseData.result {
             case .success(let data):
-                guard let responseDataStr: String = String(data:data , encoding: .utf8) else {
-                    completion(false,["Result":"Fail Decode"],nil)
-                    return
+                do {
+                    let resultDic = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                    completion(true,resultDic,nil)
+                } catch {
+                    completion(false,nil,error)
                 }
-                print(responseDataStr)
                 break
             case .failure(let error):
-                print(error.localizedDescription)
+                completion(false,nil,error)
                 break
             }
         }

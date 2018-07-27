@@ -16,6 +16,23 @@
 		230078A72103867800BEC73F /* ThumbStagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078A62103867800BEC73F /* ThumbStagramTests.swift */; };
 		230078B22103867800BEC73F /* ThumbStagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230078B12103867800BEC73F /* ThumbStagramUITests.swift */; };
 		5EA8A796C7B6B330025649E1 /* Pods_ThumbStagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333393F94404A0C15CC3EB33 /* Pods_ThumbStagramTests.framework */; };
+		9A1CA5392106E7110078564C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA5372106E7110078564C /* Video.swift */; };
+		9A1CA53A2106E7110078564C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA5382106E7110078564C /* Comment.swift */; };
+		9A1CA53C2106E7280078564C /* LowBandwidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA53B2106E7280078564C /* LowBandwidth.swift */; };
+		9A29B49F2108722800EA3459 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A29B49E2108722800EA3459 /* ContentTableViewCell.swift */; };
+		9A29B4A521094E8500EA3459 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A29B4A421094E8500EA3459 /* UIViewExtensions.swift */; };
+		9A3A98372108074A0018D6F5 /* CarouselMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A98362108074A0018D6F5 /* CarouselMedia.swift */; };
+		9A3A983921080B9F0018D6F5 /* ImageSpecProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A983821080B9F0018D6F5 /* ImageSpecProtocol.swift */; };
+		9A6A3DFC2106C2EB00496A62 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3DFB2106C2EB00496A62 /* Pagination.swift */; };
+		9A6A3DFE2106C40500496A62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3DFD2106C40500496A62 /* User.swift */; };
+		9A6A3E002106C43800496A62 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3DFF2106C43800496A62 /* Thumbnail.swift */; };
+		9A6A3E022106E0BE00496A62 /* LowResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3E012106E0BE00496A62 /* LowResolution.swift */; };
+		9A6A3E092106E21100496A62 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3E032106E21000496A62 /* Like.swift */; };
+		9A6A3E0A2106E21100496A62 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3E042106E21000496A62 /* Data.swift */; };
+		9A6A3E0B2106E21100496A62 /* Caption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3E052106E21000496A62 /* Caption.swift */; };
+		9A6A3E0C2106E21100496A62 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3E062106E21000496A62 /* Image.swift */; };
+		9A6A3E0D2106E21100496A62 /* From.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3E072106E21000496A62 /* From.swift */; };
+		9A6A3E0E2106E21100496A62 /* StandardResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A3E082106E21000496A62 /* StandardResolution.swift */; };
 		9AA93D782105A6BB00158E37 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA93D772105A6BB00158E37 /* Security.framework */; };
 		9AE1A21721055984007152F6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1A21621055984007152F6 /* NetworkManager.swift */; };
 		9AE1A21A210566AD007152F6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1A219210566AD007152F6 /* AuthViewController.swift */; };
@@ -59,6 +76,23 @@
 		3C0B2F51D3DB6A4B1BD4BCBC /* Pods-ThumbStagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram.release.xcconfig"; sourceTree = "<group>"; };
 		7F296E6FF72048EDF22F1482 /* Pods-ThumbStagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram.debug.xcconfig"; sourceTree = "<group>"; };
 		906D3D42CAB62A57BFA333D4 /* Pods-ThumbStagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A1CA5372106E7110078564C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		9A1CA5382106E7110078564C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9A1CA53B2106E7280078564C /* LowBandwidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowBandwidth.swift; sourceTree = "<group>"; };
+		9A29B49E2108722800EA3459 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
+		9A29B4A421094E8500EA3459 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		9A3A98362108074A0018D6F5 /* CarouselMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselMedia.swift; sourceTree = "<group>"; };
+		9A3A983821080B9F0018D6F5 /* ImageSpecProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpecProtocol.swift; sourceTree = "<group>"; };
+		9A6A3DFB2106C2EB00496A62 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		9A6A3DFD2106C40500496A62 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9A6A3DFF2106C43800496A62 /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		9A6A3E012106E0BE00496A62 /* LowResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowResolution.swift; sourceTree = "<group>"; };
+		9A6A3E032106E21000496A62 /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		9A6A3E042106E21000496A62 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		9A6A3E052106E21000496A62 /* Caption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Caption.swift; sourceTree = "<group>"; };
+		9A6A3E062106E21000496A62 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		9A6A3E072106E21000496A62 /* From.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = From.swift; sourceTree = "<group>"; };
+		9A6A3E082106E21000496A62 /* StandardResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardResolution.swift; sourceTree = "<group>"; };
 		9AA93D772105A6BB00158E37 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9AE1A21621055984007152F6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9AE1A219210566AD007152F6 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +155,9 @@
 		230078902103867500BEC73F /* ThumbStagram */ = {
 			isa = PBXGroup;
 			children = (
+				9A29B4A021094E6400EA3459 /* Exatensions */,
+				9A29B49D210871FD00EA3459 /* Views */,
+				9A6A3DFA2106BC3500496A62 /* Models */,
 				9AE1A2182105665B007152F6 /* ViewControllers */,
 				9AE1A21521055963007152F6 /* Network */,
 				230078912103867500BEC73F /* AppDelegate.swift */,
@@ -163,6 +200,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9A29B49D210871FD00EA3459 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A29B49E2108722800EA3459 /* ContentTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9A29B4A021094E6400EA3459 /* Exatensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A29B4A421094E8500EA3459 /* UIViewExtensions.swift */,
+			);
+			path = Exatensions;
+			sourceTree = "<group>";
+		};
+		9A6A3DFA2106BC3500496A62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A3A983821080B9F0018D6F5 /* ImageSpecProtocol.swift */,
+				9A1CA53B2106E7280078564C /* LowBandwidth.swift */,
+				9A1CA5382106E7110078564C /* Comment.swift */,
+				9A1CA5372106E7110078564C /* Video.swift */,
+				9A6A3E052106E21000496A62 /* Caption.swift */,
+				9A6A3E042106E21000496A62 /* Data.swift */,
+				9A6A3E072106E21000496A62 /* From.swift */,
+				9A6A3E062106E21000496A62 /* Image.swift */,
+				9A6A3E032106E21000496A62 /* Like.swift */,
+				9A6A3E082106E21000496A62 /* StandardResolution.swift */,
+				9A6A3E012106E0BE00496A62 /* LowResolution.swift */,
+				9A6A3DFF2106C43800496A62 /* Thumbnail.swift */,
+				9A6A3DFD2106C40500496A62 /* User.swift */,
+				9A6A3DFB2106C2EB00496A62 /* Pagination.swift */,
+				9A3A98362108074A0018D6F5 /* CarouselMedia.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9AE1A21521055963007152F6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +278,7 @@
 				2300788B2103867500BEC73F /* Frameworks */,
 				2300788C2103867500BEC73F /* Resources */,
 				414F55DB1A0F8EF1F7B89766 /* [CP] Embed Pods Frameworks */,
+				201F16F33F6842197210CC3A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +297,8 @@
 				2300789E2103867800BEC73F /* Sources */,
 				2300789F2103867800BEC73F /* Frameworks */,
 				230078A02103867800BEC73F /* Resources */,
+				07B4C01999ACE845BB63086A /* [CP] Embed Pods Frameworks */,
+				0B55E0BFEFD9BEAF55E7E33D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,6 +318,8 @@
 				230078A92103867800BEC73F /* Sources */,
 				230078AA2103867800BEC73F /* Frameworks */,
 				230078AB2103867800BEC73F /* Resources */,
+				AE48EA7CD1B06E045770ED5F /* [CP] Embed Pods Frameworks */,
+				0CD0F4971BAC74E3CB91B9C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,6 +402,66 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07B4C01999ACE845BB63086A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B55E0BFEFD9BEAF55E7E33D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramTests/Pods-ThumbStagramTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CD0F4971BAC74E3CB91B9C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		201F16F33F6842197210CC3A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		414F55DB1A0F8EF1F7B89766 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,6 +518,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AE48EA7CD1B06E045770ED5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThumbStagramUITests/Pods-ThumbStagramUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AEBC257752B04865698C252B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,9 +559,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE1A21A210566AD007152F6 /* AuthViewController.swift in Sources */,
+				9A29B4A521094E8500EA3459 /* UIViewExtensions.swift in Sources */,
+				9A6A3E0C2106E21100496A62 /* Image.swift in Sources */,
+				9A6A3E0A2106E21100496A62 /* Data.swift in Sources */,
 				9AE1A21721055984007152F6 /* NetworkManager.swift in Sources */,
+				9A1CA5392106E7110078564C /* Video.swift in Sources */,
+				9A6A3E0E2106E21100496A62 /* StandardResolution.swift in Sources */,
+				9A1CA53C2106E7280078564C /* LowBandwidth.swift in Sources */,
+				9A6A3DFE2106C40500496A62 /* User.swift in Sources */,
+				9A6A3DFC2106C2EB00496A62 /* Pagination.swift in Sources */,
+				9A6A3E0D2106E21100496A62 /* From.swift in Sources */,
+				9A6A3E0B2106E21100496A62 /* Caption.swift in Sources */,
+				9A6A3E022106E0BE00496A62 /* LowResolution.swift in Sources */,
+				9A3A98372108074A0018D6F5 /* CarouselMedia.swift in Sources */,
+				9A3A983921080B9F0018D6F5 /* ImageSpecProtocol.swift in Sources */,
+				9A1CA53A2106E7110078564C /* Comment.swift in Sources */,
 				230078942103867500BEC73F /* RootViewController.swift in Sources */,
+				9A6A3E092106E21100496A62 /* Like.swift in Sources */,
 				230078922103867500BEC73F /* AppDelegate.swift in Sources */,
+				9A6A3E002106C43800496A62 /* Thumbnail.swift in Sources */,
+				9A29B49F2108722800EA3459 /* ContentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
