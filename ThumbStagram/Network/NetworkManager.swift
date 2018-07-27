@@ -13,13 +13,21 @@ struct API{
     static let INSTAGRAM_DOMAIN = "https://api.instagram.com"
     static let INSTAGRAM_AUTH_URI = "/oauth/authorize/"
     static let INSTAGRAM_MEDIA_RECENT_URI = "/v1/users/self/media/recent/"
-    static let INSTAGRAM_CLIENT_ID = "be7de216a2aa4fa79d61e181643beaad"
-    static let INSTAGRAM_CLIENTSERCRET = "2a096a4b800944e89a1eae6348e487e1"
-    static let INSTAGRAM_REDIRECT_URI = "https://devjake.blogspot.com/"
-    static let INSTAGRAM_SCOPE = "public_content"
+}
+struct PARAM {
+    static let COUNT = "5"
+    static let SCOPE = "public_content"
+    static let CLIENT_ID = "be7de216a2aa4fa79d61e181643beaad"
+    static let CLIENTSERCRET = "2a096a4b800944e89a1eae6348e487e1"
+    static let REDIRECT_URI = "https://devjake.blogspot.com/"
+}
+struct ERROR_MESSAGE{
+    static let NOMORE_DATA = "더이상 데이터가 없습니다."
+    static let NO_DATA = "데이터가 없습니다."
 }
 
 class NetworkManager: NSObject {
+    var authToken = ""
     static let sharedManager: NetworkManager = {
         return NetworkManager()
     }()

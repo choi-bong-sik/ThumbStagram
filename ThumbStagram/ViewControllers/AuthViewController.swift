@@ -8,6 +8,7 @@
 
 import UIKit
 import KeychainAccess
+import Toast_Swift
 
 struct KEYCHAIN {
     static let INSTAGRAM_ACCESS_TOKEN = "INSTAGRAM_ACCESS_TOKEN"
@@ -19,12 +20,12 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let authURL = "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_AUTH_URI)?client_id=\(API.INSTAGRAM_CLIENT_ID)&redirect_uri=\(API.INSTAGRAM_REDIRECT_URI)&response_type=token&scope=\(API.INSTAGRAM_SCOPE)&DEBUG=True"
+        let authURL = "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_AUTH_URI)?client_id=\(PARAM.CLIENT_ID)&redirect_uri=\(PARAM.REDIRECT_URI)&response_type=\(PARAM.SCOPE)&DEBUG=True"
         let urlRequest = URLRequest.init(url: URL.init(string: authURL)!)
         webView.loadRequest(urlRequest)
     }
     func checkRequestForCallbackURLString(strURL: String) -> Bool {
-        if strURL.hasPrefix(API.INSTAGRAM_REDIRECT_URI) {
+        if strURL.hasPrefix(PARAM.REDIRECT_URI) {
             let range: Range<String.Index> = strURL.range(of: "#access_token=")!
             handleAuth(authToken: String(strURL[range.upperBound...]))
             return false;
@@ -36,7 +37,8 @@ class AuthViewController: UIViewController {
         let keychain = Keychain(service: API.INSTAGRAM_DOMAIN)
         keychain[KEYCHAIN.INSTAGRAM_ACCESS_TOKEN] = authToken
         if let delegate = delegate {
-            delegate.callMediaRecentApi(authToken: authToken)
+            NetworkManager.sharedManager.authToken = authToken
+            delegate.callMediaRecentApi(strUri: "")
         }
         self.dismiss(animated: true)
     }
@@ -48,12 +50,15 @@ extension AuthViewController: UIWebViewDelegate{
         return checkRequestForCallbackURLString(strURL: requestURLString)
     }
     func webViewDidStartLoad(_ webView: UIWebView) {
+        self.view.makeToastActivity(ToastPosition.center)
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.view.hideToastActivity()
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        self.view.hideToastActivity()
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }

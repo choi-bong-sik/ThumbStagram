@@ -8,23 +8,23 @@
 
 import UIKit
 import KeychainAccess
-
+import Toast_Swift
 protocol RootViewProtocol {
-    func callMediaRecentApi(authToken:String)
+    func callMediaRecentApi(strUri:String)
 }
 
 class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var contentTableView: UITableView!
     
     var pagination: Pagination?
-    var datas: [Data]?
+    var datas: [ContentData]?
     override func viewDidLoad() {
         super.viewDidLoad()
         let keychain = Keychain(service: API.INSTAGRAM_DOMAIN)
-        
+        datas = Array()
         if let authToken = keychain[KEYCHAIN.INSTAGRAM_ACCESS_TOKEN] {
-            print(authToken)
-            callMediaRecentApi(authToken: authToken)
+            NetworkManager.sharedManager.authToken = authToken
+            callMediaRecentApi(strUri: "")
         }else{
             showAuthViewController()
         }
@@ -36,27 +36,35 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
         self.present(vc, animated: true)
     }
     
-    func callMediaRecentApi(authToken:String){
-        NetworkManager.sharedManager.requestGet(uri:
-            "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_MEDIA_RECENT_URI)?access_token=\(authToken)&count=10")
+    func callMediaRecentApi(strUri:String){
+        self.view.makeToastActivity(ToastPosition.center)
+        var uri = "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_MEDIA_RECENT_URI)?access_token=\(NetworkManager.sharedManager.authToken)&count=\(PARAM.COUNT)"
+        
+        if strUri != "" {
+            uri = strUri
+        }
+        
+        NetworkManager.sharedManager.requestGet(uri: uri)
         {
             [weak self] (result, responseData, error) in
             guard let `self` = self else { return }
+            self.view.hideToastActivity()
             if result {
                 // 성공
                 if let paginationDic = responseData!["pagination"] as? [String : Any] {
                     if let nextMaxId = paginationDic["next_max_id"], let nextUrl = paginationDic["next_url"] {
                         self.pagination = Pagination(nextMaxId: nextMaxId as! String, nextUrl: nextUrl as! String)
+                    }else{
+                        self.pagination = Pagination(nextMaxId: "", nextUrl: "")
                     }
                 }
                 if let data:Array = responseData!["data"] as? Array<Dictionary<String,Any>> {
-                    self.datas = data.map{
-                        (dic) -> Data in
-                        return Data(dictionary: dic)
+                    for dic in data {
+                        self.datas!.append(ContentData(dictionary: dic))
                     }
                     self.contentTableView.reloadData()
                 }else{
-                    // no Datas
+                    self.view.makeToast(ERROR_MESSAGE.NO_DATA)
                 }
             }else{
                 // 실패
@@ -82,5 +90,20 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        if maximumOffset - currentOffset <= 10.0 {
+            if self.pagination!.nextUrl == "" {
+                self.view.makeToast(ERROR_MESSAGE.NOMORE_DATA)
+            }else{
+                callMediaRecentApi(strUri: self.pagination!.nextUrl)
+            }
+        }
+    }
 }
 

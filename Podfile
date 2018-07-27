@@ -8,6 +8,7 @@ target 'ThumbStagram' do
   # Pods for ThumbStagram
 	pod 'Alamofire', '~> 4.7'
     pod 'KeychainAccess'
+    pod 'Toast-Swift', '~> 3.0.1'
     
   target 'ThumbStagramTests' do
     inherit! :search_paths

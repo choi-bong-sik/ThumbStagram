@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Data {
+public struct ContentData {
     
     public var attribution : AnyObject!
     public var caption : Caption!
