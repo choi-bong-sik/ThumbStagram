@@ -7,14 +7,11 @@
 //
 
 import UIKit
-
 let imageCache = NSCache<NSString, AnyObject>()
 
 extension UIImageView {
     func loadImageUsingCache(withUrl urlString : String) {
-        
         let url = URL(string: urlString)
-        self.image = nil
         if let mCacheImage = loadMemoyCache(withKey: urlString){
             self.image = mCacheImage
         }else{

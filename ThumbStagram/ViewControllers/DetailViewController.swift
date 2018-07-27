@@ -9,9 +9,25 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    var data:Data?
+    @IBOutlet weak var imgThumbNail: UIImageView!
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var imgContnet: UIImageView!
+    @IBOutlet weak var lblCaptionText: UILabel!
+    
+    var contentData:ContentData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if contentData != nil {
+            self.setViews()
+        }
+    }
+    
+    func setViews() {
+        self.imgThumbNail.loadImageUsingCache(withUrl: contentData!.user.profilePicture)
+        self.imgContnet.loadImageUsingCache(withUrl: contentData!.images.thumbnail.url)
+        self.imgContnet.loadImageUsingCache(withUrl: contentData!.images.standardResolution.url)
+        self.lblUserName.text = contentData!.user.fullName
+        self.lblCaptionText.text = contentData!.caption.text
     }
 }

@@ -17,11 +17,11 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
     @IBOutlet weak var contentTableView: UITableView!
     
     var pagination: Pagination?
-    var datas: [ContentData]?
+    var contentDatas: [ContentData]?
     override func viewDidLoad() {
         super.viewDidLoad()
         let keychain = Keychain(service: API.INSTAGRAM_DOMAIN)
-        datas = Array()
+        contentDatas = Array()
         if let authToken = keychain[KEYCHAIN.INSTAGRAM_ACCESS_TOKEN] {
             NetworkManager.sharedManager.authToken = authToken
             callMediaRecentApi(strUri: "")
@@ -60,7 +60,7 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
                 }
                 if let data:Array = responseData!["data"] as? Array<Dictionary<String,Any>> {
                     for dic in data {
-                        self.datas!.append(ContentData(dictionary: dic))
+                        self.contentDatas!.append(ContentData(dictionary: dic))
                     }
                     self.contentTableView.reloadData()
                 }else{
@@ -74,7 +74,7 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
     
     // MARK: - table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let dataCount = datas?.count {
+        if let dataCount = contentDatas?.count {
             return dataCount
         }
         return 0
@@ -82,16 +82,27 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifierContent", for: indexPath) as! ContentTableViewCell
-        let data = datas![indexPath.row]
-        cell.lblUserName.text = data.user.username
-        cell.lblCaptionText.text = data.caption.text
-        cell.imgThumbNail.loadImageUsingCache(withUrl: data.user.profilePicture)
-        cell.imgContnet.loadImageUsingCache(withUrl: data.images.thumbnail.url)
+        let contentData = contentDatas![indexPath.row]
+        cell.lblUserName.text = contentData.user.username
+        cell.lblCaptionText.text = contentData.caption.text
+        cell.imgThumbNail.loadImageUsingCache(withUrl: contentData.user.profilePicture)
+        cell.imgContnet.loadImageUsingCache(withUrl: contentData.images.thumbnail.url)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let cellContentData = contentDatas![indexPath.row]
+        var vc = DetailViewController()
+
+        if cellContentData.type == "carousel" {
+            vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Carousel") as! CarouselViewController
+        }else if cellContentData.type == "video" {
+            vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Video") as! VideoViewController
+        }else{
+            vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Detail") as! DetailViewController
+        }
+        vc.contentData = cellContentData
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (4.7.3)
   - KeychainAccess (3.1.1)
+  - Player (0.8.4)
   - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - KeychainAccess
+  - Player (~> 0.8.0)
   - Toast-Swift (~> 3.0.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - KeychainAccess
+    - Player
     - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
+  Player: e45514e9e5fb8ff18f50eb2ba6f84dac9b6a0024
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 8a2d8d8136a3818278afcfbf9e28edb5f56586f6
+PODFILE CHECKSUM: cec9ca447f7d80c25abbcb02b6f08bf4a15b8fea
 
 COCOAPODS: 1.5.3

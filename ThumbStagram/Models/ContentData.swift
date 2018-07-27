@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 public struct ContentData {
     
     public var attribution : AnyObject!
