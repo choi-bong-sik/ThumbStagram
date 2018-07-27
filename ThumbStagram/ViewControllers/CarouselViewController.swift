@@ -30,7 +30,7 @@ class CarouselViewController: DetailViewController,UIScrollViewDelegate {
                                        y: 0,
                                        width: scrContent.frame.size.width,
                                        height: scrContent.frame.size.height)
-//                imgView.contentMode = UIViewContentMode.scaleAspectFit
+                imgView.contentMode = UIViewContentMode.scaleAspectFit
                 imgCounter += 1
             }
         }
@@ -42,6 +42,8 @@ class CarouselViewController: DetailViewController,UIScrollViewDelegate {
         // The total number of pages that are available is based on how many available colors we have.
         self.pageControl.frame = CGRect(x: 0, y: self.view.frame.size.height - 40, width: self.view.frame.size.width, height: 20)
         self.pageControl.addTarget(self, action: #selector(self.changePage(sender:)), for: UIControlEvents.valueChanged)
+        self.pageControl.currentPageIndicatorTintColor = .lightGray
+        self.pageControl.pageIndicatorTintColor = .darkGray
         self.pageControl.numberOfPages = count
         self.pageControl.currentPage = 0
         self.view.addSubview(self.pageControl)
