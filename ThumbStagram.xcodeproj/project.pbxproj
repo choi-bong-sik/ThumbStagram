@@ -161,7 +161,7 @@
 		230078902103867500BEC73F /* ThumbStagram */ = {
 			isa = PBXGroup;
 			children = (
-				9A29B4A021094E6400EA3459 /* Exatensions */,
+				9A29B4A021094E6400EA3459 /* Extensions */,
 				9A29B49D210871FD00EA3459 /* Views */,
 				9A6A3DFA2106BC3500496A62 /* Models */,
 				9AE1A2182105665B007152F6 /* ViewControllers */,
@@ -214,12 +214,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9A29B4A021094E6400EA3459 /* Exatensions */ = {
+		9A29B4A021094E6400EA3459 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				9A29B4A421094E8500EA3459 /* UIViewExtensions.swift */,
 			);
-			path = Exatensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9A6A3DFA2106BC3500496A62 /* Models */ = {
