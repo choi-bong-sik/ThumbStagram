@@ -9,6 +9,11 @@
 import UIKit
 import Player
 
+struct BTN_TITLE {
+    static var MUTE = "Mute"
+    static var SPEAK = "Speak"
+}
+
 class VideoViewController: DetailViewController,PlayerDelegate,PlayerPlaybackDelegate {
     
     @IBOutlet weak var viewBase: UIView!
@@ -56,10 +61,10 @@ class VideoViewController: DetailViewController,PlayerDelegate,PlayerPlaybackDel
     @IBAction func pressSpeak(_ sender: UIButton){
         if player.muted {
             player.muted = false
-            self.btnSpeak.setTitle("Speak", for: UIControlState.normal)
+            self.btnSpeak.setTitle(BTN_TITLE.SPEAK, for: UIControlState.normal)
         }else{
             player.muted = true
-            self.btnSpeak.setTitle("Mute", for: UIControlState.normal)
+            self.btnSpeak.setTitle(BTN_TITLE.MUTE, for: UIControlState.normal)
         }
     }
     
