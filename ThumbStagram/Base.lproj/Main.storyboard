@@ -109,6 +109,26 @@
                                             <outlet property="lblUserName" destination="9mn-Wz-uZR" id="hA0-xi-V4B"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifierLoading" rowHeight="44" id="bwV-Dk-iV7" customClass="LoadingTableViewCell" customModule="ThumbStagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="448" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bwV-Dk-iV7" id="e7s-Ez-Skx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2sQ-Md-keN">
+                                                    <rect key="frame" x="177" y="12" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2sQ-Md-keN" firstAttribute="centerY" secondItem="e7s-Ez-Skx" secondAttribute="centerY" id="GUr-re-6ea"/>
+                                                <constraint firstItem="2sQ-Md-keN" firstAttribute="centerX" secondItem="e7s-Ez-Skx" secondAttribute="centerX" id="zmE-3Z-DJO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="indicator" destination="2sQ-Md-keN" id="Xdy-U1-9f4"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="BEw-p1-r2q"/>

@@ -38,7 +38,7 @@ class AuthViewController: UIViewController {
         keychain[KEYCHAIN.INSTAGRAM_ACCESS_TOKEN] = authToken
         if let delegate = delegate {
             NetworkManager.sharedManager.authToken = authToken
-            delegate.callMediaRecentApi(strUri: "")
+            delegate.callMediaRecentApi(strUri: "",isLoadMore: false)
         }
         self.dismiss(animated: true)
     }

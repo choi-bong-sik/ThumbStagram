@@ -18,6 +18,7 @@
 		232C6CA8210B1158008A94FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C6CA7210B1158008A94FC /* DetailViewController.swift */; };
 		232C6CAA210B5A2E008A94FC /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C6CA9210B5A2E008A94FC /* CarouselViewController.swift */; };
 		232C6CAC210B5A56008A94FC /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C6CAB210B5A56008A94FC /* VideoViewController.swift */; };
+		23F96C1E210C0D5B000A2A70 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F96C1D210C0D5B000A2A70 /* LoadingTableViewCell.swift */; };
 		5EA8A796C7B6B330025649E1 /* Pods_ThumbStagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333393F94404A0C15CC3EB33 /* Pods_ThumbStagramTests.framework */; };
 		9A1CA5392106E7110078564C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA5372106E7110078564C /* Video.swift */; };
 		9A1CA53A2106E7110078564C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CA5382106E7110078564C /* Comment.swift */; };
@@ -77,6 +78,7 @@
 		232C6CA7210B1158008A94FC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		232C6CA9210B5A2E008A94FC /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		232C6CAB210B5A56008A94FC /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		23F96C1D210C0D5B000A2A70 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		333393F94404A0C15CC3EB33 /* Pods_ThumbStagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThumbStagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CA3077ECFDB6E8C25EDFC7 /* Pods_ThumbStagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThumbStagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0B2F51D3DB6A4B1BD4BCBC /* Pods-ThumbStagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThumbStagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThumbStagram/Pods-ThumbStagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				9A29B49E2108722800EA3459 /* ContentTableViewCell.swift */,
+				23F96C1D210C0D5B000A2A70 /* LoadingTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				9A6A3E0E2106E21100496A62 /* StandardResolution.swift in Sources */,
 				9A1CA53C2106E7280078564C /* LowBandwidth.swift in Sources */,
 				232C6CAA210B5A2E008A94FC /* CarouselViewController.swift in Sources */,
+				23F96C1E210C0D5B000A2A70 /* LoadingTableViewCell.swift in Sources */,
 				9A6A3DFE2106C40500496A62 /* User.swift in Sources */,
 				9A6A3DFC2106C2EB00496A62 /* Pagination.swift in Sources */,
 				9A6A3E0D2106E21100496A62 /* From.swift in Sources */,

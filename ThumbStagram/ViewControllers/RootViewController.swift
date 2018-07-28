@@ -10,10 +10,11 @@ import UIKit
 import KeychainAccess
 import Toast_Swift
 protocol RootViewProtocol {
-    func callMediaRecentApi(strUri:String)
+    func callMediaRecentApi(strUri:String, isLoadMore:Bool)
 }
 
 class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var contentTableView: UITableView!
     
     var pagination: Pagination?
@@ -24,7 +25,7 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
         contentDatas = Array()
         if let authToken = keychain[KEYCHAIN.INSTAGRAM_ACCESS_TOKEN] {
             NetworkManager.sharedManager.authToken = authToken
-            callMediaRecentApi(strUri: "")
+            callMediaRecentApi(strUri: "",isLoadMore: false)
         }else{
             showAuthViewController()
         }
@@ -36,7 +37,7 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
         self.present(vc, animated: true)
     }
     
-    func callMediaRecentApi(strUri:String){
+    func callMediaRecentApi(strUri: String, isLoadMore: Bool) {
         self.view.makeToastActivity(ToastPosition.center)
         var uri = "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_MEDIA_RECENT_URI)?access_token=\(NetworkManager.sharedManager.authToken)&count=\(PARAM.COUNT)"
         
@@ -59,10 +60,19 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
                     }
                 }
                 if let data:Array = responseData!["data"] as? Array<Dictionary<String,Any>> {
-                    for dic in data {
-                        self.contentDatas!.append(ContentData(dictionary: dic))
+                    if isLoadMore {
+                        for dic in data {
+                            self.contentDatas!.append(ContentData(dictionary: dic))
+                            self.contentTableView.beginUpdates()
+                            self.contentTableView.insertRows(at: [IndexPath.init(row: self.contentDatas!.count-1, section: 0)], with: .automatic)
+                            self.contentTableView.endUpdates()
+                        }
+                    }else{
+                        self.contentDatas = data.map{ (dic) -> ContentData in
+                            return ContentData(dictionary: dic)
+                        }
+                        self.contentTableView.reloadData()
                     }
-                    self.contentTableView.reloadData()
                 }else{
                     self.view.makeToast(ERROR_MESSAGE.NO_DATA)
                 }
@@ -73,21 +83,32 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
     }
     
     // MARK: - table
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == contentDatas!.count {
+            return 44
+        }
+        return 420
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let dataCount = contentDatas?.count {
-            return dataCount
+            return (dataCount + 1)
         }
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifierContent", for: indexPath) as! ContentTableViewCell
-        let contentData = contentDatas![indexPath.row]
-        cell.lblUserName.text = contentData.user.username
-        cell.lblCaptionText.text = contentData.caption.text
-        cell.imgThumbNail.loadImageUsingCache(withUrl: contentData.user.profilePicture)
-        cell.imgContnet.loadImageUsingCache(withUrl: contentData.images.thumbnail.url)
-        return cell
+        if indexPath.row == contentDatas!.count  {
+            let loading = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifierLoading", for: indexPath) as! LoadingTableViewCell
+            return loading
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifierContent", for: indexPath) as! ContentTableViewCell
+            let contentData = contentDatas![indexPath.row]
+            cell.lblUserName.text = contentData.user.username
+            cell.lblCaptionText.text = contentData.caption.text
+            cell.imgThumbNail.loadImageUsingCache(withUrl: contentData.user.profilePicture)
+            cell.imgContnet.loadImageUsingCache(withUrl: contentData.images.thumbnail.url)
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -104,15 +125,14 @@ class RootViewController: UIViewController, RootViewProtocol, UITableViewDelegat
         vc.contentData = cellContentData
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        let currentOffset = scrollView.contentOffset.y
-        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-        if maximumOffset - currentOffset <= 10.0 {
-            if self.pagination!.nextUrl == "" {
-                self.view.makeToast(ERROR_MESSAGE.NOMORE_DATA)
-            }else{
-                callMediaRecentApi(strUri: self.pagination!.nextUrl)
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (contentDatas!.count) {
+            if let nextUrl = self.pagination?.nextUrl {
+                if nextUrl == "" {
+                    self.view.makeToast(ERROR_MESSAGE.NOMORE_DATA)
+                }else{
+                    callMediaRecentApi(strUri: self.pagination!.nextUrl,isLoadMore: true)
+                }
             }
         }
     }
