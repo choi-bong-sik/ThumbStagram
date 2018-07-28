@@ -23,7 +23,12 @@ cocoapod 을 이용해 오픈소스를 관리한다.
 
 ## 3. PROJECT 구조
 > Extensions
+* UI extension 을 관리한다.
 > Views
+* 상속받아 구현한 UI를 관리한다.
 > Models
+* data model 을 관리한다.
 > ViewControllers
+* ViewController 들을 관리한다.
 > Network
+* Alamofire를 사용하기 위한 manager 등을 관리한다.
