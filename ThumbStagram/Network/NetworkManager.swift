@@ -16,7 +16,7 @@ struct API{
 }
 struct PARAM {
     static let COUNT = "5"
-    static let SCOPE = "token"
+    static let SCOPE = "public_content"
     static let CLIENT_ID = "be7de216a2aa4fa79d61e181643beaad"
     static let CLIENTSERCRET = "2a096a4b800944e89a1eae6348e487e1"
     static let REDIRECT_URI = "https://devjake.blogspot.com/"

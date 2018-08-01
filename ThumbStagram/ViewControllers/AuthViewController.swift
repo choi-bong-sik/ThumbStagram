@@ -20,7 +20,7 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let authURL = "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_AUTH_URI)?client_id=\(PARAM.CLIENT_ID)&redirect_uri=\(PARAM.REDIRECT_URI)&response_type=\(PARAM.SCOPE)&DEBUG=True"
+        let authURL = "\(API.INSTAGRAM_DOMAIN)\(API.INSTAGRAM_AUTH_URI)?client_id=\(PARAM.CLIENT_ID)&redirect_uri=\(PARAM.REDIRECT_URI)&response_type=token&scope=\(PARAM.SCOPE)&DEBUG=True"
         let urlRequest = URLRequest.init(url: URL.init(string: authURL)!)
         webView.loadRequest(urlRequest)
     }
